@@ -5,24 +5,22 @@ const formatString = function (string) {
   const maxLength = 40;
 
   if (string.length > maxLength) {
-    const latersLook = string.split("");
-    latersLook.splice(maxLength);
-    latersLook.push("...");
-    const normalizeString = latersLook.join("");
-    console.log(normalizeString);
+    return string.slice(0, maxLength) + "...";
   }
-  if (string.length <= maxLength) {
-    console.log(string);
-  }
+  return string;
 };
 
-formatString("Curabitur ligula sapien, tincidunt non.");
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка
 
-formatString("Vestibulum facilisis, purus nec pulvinar iaculis.");
+console.log(formatString("Vestibulum facilisis, purus nec pulvinar iaculis."));
 // // вернется форматированная строка
 
-formatString("Curabitur ligula sapien.");
+console.log(formatString("Curabitur ligula sapien."));
 // // вернется оригинальная строка
 
-formatString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."); //вернется форматированная строка
+console.log(
+  formatString(
+    "Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."
+  )
+); //вернется форматированная строка
