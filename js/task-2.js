@@ -3,11 +3,13 @@
 const calculateEngravingPrice = function (message, pricePerWord) {
   const value = message.split(" ");
   const quantity = value.length;
-
+  const result = pricePerWord * quantity;
   console.log(`фраза - ${message}`);
-  return `количество слов - ${quantity}, гравировка одного слова - ${pricePerWord}. общая сумма - ${
-    pricePerWord * quantity
-  }`;
+  console.log(
+    `количество слов - ${quantity}, гравировка одного слова - ${pricePerWord}. общая сумма - ${result}`
+  );
+
+  return result;
 };
 
 console.log(

@@ -2,9 +2,10 @@
 
 let total = 0;
 const numbers = [];
+let input;
 
 do {
-  let input = prompt("Введите число");
+  input = prompt("Введите число");
 
   if (input === null) {
     console.log("Отменено пользователем!");
@@ -18,12 +19,12 @@ do {
   }
 
   numbers.push(input);
-} while (true);
+} while (input !== null);
 
 if (numbers.length > 0) {
   console.log(numbers);
   for (let value of numbers) {
     total += value;
   }
-  console.log(`Общая сумма чисел равна [${total}]`);
+  console.log(`Общая сумма чисел равна ${total}`);
 }
