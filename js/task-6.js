@@ -4,7 +4,7 @@ let total = 0;
 const numbers = [];
 let input;
 
-do {
+while (input !== null) {
   input = prompt("Введите число");
 
   if (input === null) {
@@ -17,9 +17,8 @@ do {
     alert("Было введено не число, попробуйте еще раз");
     continue;
   }
-
   numbers.push(input);
-} while (input !== null);
+}
 
 if (numbers.length > 0) {
   console.log(numbers);
