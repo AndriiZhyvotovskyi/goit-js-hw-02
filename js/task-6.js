@@ -12,12 +12,12 @@ while (input !== null) {
     break;
   }
 
-  input = Number(input);
-  if (isNaN(input)) {
+  const conversionNumber = Number(input);
+  if (isNaN(conversionNumber)) {
     alert("Было введено не число, попробуйте еще раз");
     continue;
   }
-  numbers.push(input);
+  numbers.push(conversionNumber);
 }
 
 if (numbers.length > 0) {
